@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) =>{
         callback('unable to fetch the location entered')
     }else {
         callback(undefined,
-            `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees out. There is a ${body.currently.precipProbability}% chance of rain`
+            `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees out. The high for today is ${body.daily.data[0].temperatureHigh} degrees and the low is ${body.daily.data[0].temperatureLow} degrees. There is a ${body.currently.precipProbability}% chance of rain`
          )
     }
    })
